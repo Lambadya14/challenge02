@@ -46,7 +46,7 @@ function checkEmail(email) {
 // checkEmail('apranata@binar.com');
 // checkEmail('apranata@binar');
 // checkEmail('apranata');  //???
-// checkTypeNumber(checkEmail(3322)); //invalid->3322 bukan email & Error: Bro Where is the parameter? ->tidak berjalan undefine
+// checkTypeNumber(checkEmail(3322));
 // checkEmail();
 ////////////////////////// 4 Password Validation/////////////////////////////////
 function isValidPassword(email) {
@@ -70,9 +70,9 @@ function isValidPassword(email) {
 // isValidPassword("Meong2021");
 // isValidPassword("meong2021");
 // isValidPassword("@eong");
-// isValidPassword("Meong2"); //karena hanya ada 6 kata
-// isValidPassword(0);// email.match bukan fungsi + yang terbaca harus string
-// isValidPassword(); //  email.match bukan fungsi + null
+// isValidPassword("Meong2"); 
+// isValidPassword(0);
+// isValidPassword(); 
 ///////////////////////////////////// 5 Split Name////////////////////////////
 function getSplitName(personName) {
   let fullName = personName.split(" ");
@@ -104,7 +104,7 @@ function getSplitName(personName) {
 // getSplitName("Dwi Kuncoro");
 // getSplitName("Aurora");
 // getSplitName("Aurora Aureliya Sukma Darma");
-// getSplitName(0);// personName.split bukan fungsi + krn tidak bisa mendefinisikan number
+// getSplitName(0);
 ///////////////////////////// 6 Angka Terbesar Ke-2//////////////////////////
 function getAngkaTerbesarKedua(Angka) {
   Angka.sort(function (x, y) {
@@ -118,8 +118,8 @@ function getAngkaTerbesarKedua(Angka) {
 }
 let Angka = [9, 4, 7, 7, 4, 3, 2, 8];
 // console.log(getAngkaTerbesarKedua(Angka));
-// console.log(getAngkaTerbesarKedua(0));// Angka.sort is not a function + tidak terbaca krn bukan array
-// console.log(getAngkaTerbesarKedua());//error: properti tidak terdefinisi(length) + karena tidak ada isi
+// console.log(getAngkaTerbesarKedua(0);
+// console.log(getAngkaTerbesarKedua());
 
 ////////////////////////// 7 Total Penjualan////////////////////////////////
 const dataPenjualanPakAldi = [
@@ -239,10 +239,7 @@ function getInfoPenjualan(dataPenjualanBuku) {
       return -1;
     }
     return 0;
-    //-1 berarti yang pertama sebelum yang kedua, 1 berarti setelahnya, dan 0 berarti setara.
-    //fungsi perbandingan digunakan untuk memberi tahu CALLER bagaimana nilai pertama harus diurutkan dalam kaitannya dengan yang kedua
   }
-
 
   const tampil = {};
   tampil.totalKeuntungan = formatter.format(totalKeuntungan);
@@ -252,4 +249,4 @@ function getInfoPenjualan(dataPenjualanBuku) {
   tampil.penulisTerlaris = dataPenjualanBuku.sort(buku)[0].penulis;
   console.log(tampil);
 }
-getInfoPenjualan(dataPenjualanNovel);
+// getInfoPenjualan(dataPenjualanNovel);
