@@ -26,7 +26,6 @@ const dataPenjualanNovel = [
     totalTerjual: 213,
     sisaStok: 5,
   },
-
   {
     idProduct: "BOOK002941",
     namaProduk: "Laskar Pelangi",
