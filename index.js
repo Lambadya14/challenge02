@@ -242,30 +242,14 @@ function getInfoPenjualan(dataPenjualanBuku) {
     //-1 berarti yang pertama sebelum yang kedua, 1 berarti setelahnya, dan 0 berarti setara.
     //fungsi perbandingan digunakan untuk memberi tahu CALLER bagaimana nilai pertama harus diurutkan dalam kaitannya dengan yang kedua
   }
-  function penulis() {
-    const TL = dataPenjualanBuku.filter((obj) => obj.penulis === "Tere Liye");
-    const FB = dataPenjualanBuku.filter(
-      (obj) => obj.penulis === "Fiersa Besari"
-    );
-    const AH = dataPenjualanBuku.filter(
-      (obj) => obj.penulis === "Andrea Hirata"
-    );
 
-    if (TL.length > 1 && TL.length > FB.length && TL.length > AH.length) {
-      return "Tere Liye";
-    }
-    if (FB.length > 1 && FB.length > TL.length && FB.length > AH.length) {
-      return "Fiersa Besari";
-    }
-    return "Andrea Hirata";
-  }
 
   const tampil = {};
   tampil.totalKeuntungan = formatter.format(totalKeuntungan);
   tampil.totalModal = formatter.format(totalModal);
   tampil.persentaseKeuntungan = persentaseKeuntungan.toFixed(2) + "%";
   tampil.bukuTerlaris = dataPenjualanBuku.sort(buku)[0].namaProduk;
-  tampil.penulisTerlaris = penulis();
+  tampil.penulisTerlaris = dataPenjualanBuku.sort(buku)[0].penulis;
   console.log(tampil);
 }
 getInfoPenjualan(dataPenjualanNovel);
