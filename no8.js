@@ -78,12 +78,12 @@ function getInfoPenjualan(dataPenjualanBuku) {
     return 0;
   }
 
-  const tampil = {};
-  tampil.totalKeuntungan = formatter.format(totalKeuntungan);
-  tampil.totalModal = formatter.format(totalModal);
-  tampil.persentaseKeuntungan = persentaseKeuntungan.toFixed(2) + "%";
-  tampil.bukuTerlaris = dataPenjualanBuku.sort(buku)[0].namaProduk;
-  tampil.penulisTerlaris = dataPenjualanBuku.sort(buku)[0].penulis;
-  return tampil;
+  return {
+    totalKeuntungan: formatter.format(totalKeuntungan),
+    totalModal: formatter.format(totalModal),
+    persentaseKeuntungan: persentaseKeuntungan.toFixed(2) + "%",
+    bukuTerlaris: dataPenjualanBuku.sort(buku)[0].namaProduk,
+    penulisTerlaris: dataPenjualanBuku.sort(buku)[0].penulis,
+  };
 }
 console.log(getInfoPenjualan(dataPenjualanNovel));
