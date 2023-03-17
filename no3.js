@@ -13,5 +13,5 @@ console.log(checkEmail("apranata@binar.co.id"));
 console.log(checkEmail("apranata@binar.com"));
 console.log(checkEmail("apranata@binar"));
 console.log(checkEmail("apranata")); //INVALID
-console.log(checkTypeNumber(checkEmail(3322))); //Error: Invalide Data Type
+console.log(checkTypeNumber(checkEmail(3322))); //Error: Invalid Data Type
 console.log(checkEmail()); //INVALID
